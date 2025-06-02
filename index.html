@@ -10,21 +10,44 @@
       font-family: Arial, sans-serif;
       background: #f9f9f9;
       color: #111;
+      line-height: 1.8;
+    }
+    header.hero {
+      background: url('cover.jpg') no-repeat center center/cover;
+      color: black;
+      text-align: center;
+      padding: 180px 20px 100px;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .navbar nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #111;
+      font-size: 14px;
     }
     section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    header {
-      background: url('cover.jpg') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 180px 20px 100px;
-    }
     h1 {
       font-size: 48px;
       margin-bottom: 10px;
+      color: black;
     }
     h2 {
       font-size: 32px;
@@ -64,10 +87,26 @@
       padding: 40px 20px;
       text-align: center;
     }
+    ul {
+      padding-left: 20px;
+    }
+    p, li {
+      line-height: 1.8;
+    }
   </style>
 </head>
 <body>
-  <header>
+  <div class="navbar">
+    <div class="logo">ROOF PLACE</div>
+    <nav>
+      <a href="#">Афиша</a>
+      <a href="#">Площадка</a>
+      <a href="#">Аренда</a>
+      <a href="#form">Контакты</a>
+    </nav>
+  </div>
+
+  <header class="hero">
     <h1>ВАШЕ МЕРОПРИЯТИЕ на крыше</h1>
     <p class="subheading">Собрали лучшее, что есть в Петербурге<br>музыка · крыши · вид на Финский залив</p>
     <a href="#form" class="btn">Оставить заявку</a>
@@ -96,55 +135,49 @@
     <div class="grid">
       <div class="card">
         <h3>ROOF PLACE AIR</h3>
-        <p>2000 м² открытой крыши · до 1500 гостей · сцена 12×6 м · звук D&B · LED-экран · фудкорт · бары · гримёрки · работает с мая по октябрь</p>
+        <ul>
+          <li>2000 м² открытой крыши</li>
+          <li>до 1500 гостей</li>
+          <li>сцена 12×6 м</li>
+          <li>звук D&B</li>
+          <li>LED-экран</li>
+          <li>фудкорт, бары, VIP-зоны</li>
+          <li>гримёрки, локеры</li>
+          <li>работает с мая по октябрь</li>
+        </ul>
       </div>
       <div class="card">
         <h3>ROOF PLACE BAY</h3>
-        <p>450 м² · два зала BAY 1 и BAY 2 · сцена, Funktion-One · Pioneer DJ · выход на крышу и террасу · работает круглый год</p>
+        <ul>
+          <li>450 м²</li>
+          <li>два зала BAY 1 и BAY 2</li>
+          <li>сцена, Funktion-One, Pioneer DJ</li>
+          <li>панорамные окна, бар, выход на крышу</li>
+          <li>терраса, гардероб</li>
+          <li>работает круглый год</li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <section>
-    <h2>Условия аренды</h2>
-    <p>Можно арендовать отдельно крышу, зал, либо весь комплекс. Включено: техническое сопровождение, команда, уборка, гримёрки, гардероб. Дополнительно — кухня под ключ, декор, рассадка, бар, доп. техника.</p>
-  </section>
-
-  <section>
-    <h2>Оснащение</h2>
-    <p><strong>ROOF PLACE AIR:</strong> звук D&B Q1/Q-Sub, сценический комплекс 14×16 м, свет Sharpy Beam, AURA Wash, LED-экран, гримерки, backstage, Wi-Fi.</p>
-    <p><strong>ROOF PLACE BAY:</strong> Funktion-One, Pioneer DJ, Involight, бар, проектор, зона погрузки.</p>
-  </section>
-
-  <section>
-    <h2>Кухня и бар</h2>
-    <p>Кухня под ключ от шефа. Меню: фуршет, банкет, кофе-брейк или welcome-зона. Возможна работа с внешним кейтерингом.</p>
   </section>
 
   <section>
     <h2>Отзывы</h2>
     <div class="grid">
       <div class="card">
-        «Площадка универсальная, удобная для продакшена. Всё было готово. Вид потрясающий.» — Полина, режиссёр
+        <h4>Корпоратив, 15.12.2022</h4>
+        <p>Хотела сказать большое спасибо за помощь в организации нашего корпоратива и за оперативное решение всех внезапно возникающих вопросов! Очень удобное зонирование локации. Всем всё очень понравилось!</p>
       </div>
       <div class="card">
-        «Концерт прошёл на одном дыхании. Отличный звук, свет и команда на месте.» — Павел, музыкальный продюсер
+        <h4>Вероника — День Рождения</h4>
+        <p>Отдельный вход, терраса с шикарным видом, зонирование помещений, звуковое оборудование. И никаких ограничений по времени!</p>
       </div>
       <div class="card">
-        «Партнёры в восторге. Бренд-ивент выглядел сильно выше бюджета.» — Ирина, агентство
+        <h4>ООО "Выход" — корпоратив 09.09.2022</h4>
+        <p>От лица компании выражаем благодарность коллективу ROOF PLACE за продуктивное взаимодействие и высокий уровень обслуживания.</p>
+      </div>
+      <div class="card">
+        <h4>Екатерина — свадьба 11.10.2022</h4>
+        <p>Команда помогла с меню и расстановкой мебели, лояльно и дружелюбно отнеслась к пожеланиям. Место — атмосферное, еда — отличная.</p>
       </div>
     </div>
   </section>
-
-  <section id="form">
-    <h2>Связаться</h2>
-    <p>Оставьте заявку — мы расскажем про формат, свободные даты и покажем площадку вживую.</p>
-    <a href="#" class="btn">Оставить заявку</a>
-    <a href="#" class="btn">Скачать презентацию</a>
-  </section>
-
-  <footer>
-    ROOF PLACE, Санкт-Петербург · Брусницын квартал
-  </footer>
-</body>
-</html>
