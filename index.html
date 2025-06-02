@@ -5,128 +5,336 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Аренда ROOF PLACE</title>
   <style>
+    /* Базовые стили */
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background: #f2f2f2;
       color: #222;
-      background: #f8f8f8;
     }
-    header, section {
-      padding: 40px 20px;
-      max-width: 960px;
-      margin: auto;
+    a {
+      color: #000;
+      text-decoration: none;
     }
-    header {
-      background: #fff;
-      text-align: center;
+    h1, h2, h3 {
+      margin: 0 0 10px 0;
+      line-height: 1.2;
     }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-    p.lead {
-      font-size: 18px;
-      color: #666;
-    }
-    h2 {
-      font-size: 24px;
-      margin-top: 40px;
-      margin-bottom: 20px;
+    p {
+      margin: 0 0 15px 0;
     }
     ul {
+      margin: 0 0 15px 0;
       padding-left: 20px;
     }
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Контейнеры */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header, nav, section, footer {
+      width: 100%;
+      display: block;
+    }
+    .section {
+      padding: 40px 0;
+    }
+    .bg-white {
+      background: #fff;
+    }
+    .bg-gray {
+      background: #fafafa;
+    }
+    .divider {
+      height: 1px;
+      background: #ddd;
+      margin: 0;
+      border: none;
+    }
+
+    /* Навигация */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    .nav-logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Кнопки */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      text-align: center;
+    }
+    .btn-secondary {
+      display: inline-block;
+      padding: 8px 20px;
+      background: #555;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    /* Два столбца */
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .two-col > div {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    /* Таблица */
     table {
       width: 100%;
       border-collapse: collapse;
       background: #fff;
+      margin-top: 10px;
     }
     th, td {
       padding: 12px;
       border: 1px solid #ddd;
       text-align: left;
     }
-    .block {
-      background: #fff;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 8px;
+    th {
+      background: #f0f0f0;
     }
-    .button {
-      display: inline-block;
-      padding: 12px 24px;
-      background: black;
-      color: white;
-      text-decoration: none;
-      margin-top: 20px;
+
+    /* Футер */
+    footer {
+      background: #fff;
+      border-top: 1px solid #ddd;
+      padding: 20px 0;
+      font-size: 14px;
+      color: #555;
+    }
+    .footer-container {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 20px;
+    }
+    .footer-container a {
+      color: #000;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Аренда ROOF PLACE</h1>
-    <p class="lead">Две независимые площадки: open-air и клуб. Всё, что нужно для событий от 50 до 1500 гостей.</p>
+
+  <!-- Навигация -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">ROOF PLACE</div>
+      <div class="nav-links">
+        <a href="#">Главная</a>
+        <a href="#formats">Форматы</a>
+        <a href="#spaces">Площадки</a>
+        <a href="#cost">Стоимость</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Первый экран -->
+  <header class="bg-white section">
+    <div class="container">
+      <h1>Аренда ROOF PLACE</h1>
+      <p class="lead">Две площадки — крыша и клуб. Всё для событий от 50 до 1500 гостей.</p>
+      <a href="#contacts" class="btn">Запросить условия</a>
+    </div>
   </header>
 
-  <section class="block">
-    <h2>Форматы</h2>
-    <ul>
-      <li>Презентации, съёмки, показы</li>
-      <li>Корпоративы, вечеринки, маркеты</li>
-      <li>Лекции, конференции, частные события</li>
-    </ul>
+  <hr class="divider">
+
+  <!-- Форматы мероприятий -->
+  <section id="formats" class="bg-gray section">
+    <div class="container">
+      <h2>Форматы мероприятий</h2>
+      <div class="two-col">
+        <div>
+          <ul>
+            <li>Презентации и запуски брендов</li>
+            <li>Корпоративы и team building</li>
+            <li>Закрытые вечеринки и afterparty</li>
+            <li>Конференции, лекции, воркшопы</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Маркеты и pop-up магазины</li>
+            <li>Съёмки рекламы, клипов, live-сессий</li>
+            <li>Свадьбы и камерные ужины</li>
+            <li>Спецпроекты и шоукейс</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="block">
-    <h2>Площадка ROOF PLACE AIR</h2>
-    <ul>
-      <li>Открытая крыша на 2000 м²</li>
-      <li>Вместимость: до 1500 гостей</li>
-      <li>Панорамный вид, сцена 12×6 м, свет и звук D&B</li>
-      <li>Фудкорт, гастробар, терраса, WC, гримёрки</li>
-      <li>Кейтеринг под ключ: фуршет, банкет, кофе-брейк</li>
-    </ul>
+  <hr class="divider">
+
+  <!-- Площадки -->
+  <section id="spaces" class="bg-white section">
+    <div class="container">
+      <h2>Площадки</h2>
+
+      <div class="two-col">
+        <div class="block">
+          <h3>ROOF PLACE AIR (крыша)</h3>
+          <ul>
+            <li>2000 м² открытой площадки</li>
+            <li>Вместимость до 1500 гостей</li>
+            <li>Сцена 12×6 м, свет D&B, LED-экран</li>
+            <li>Фудкорт, гастробар, VIP-зона</li>
+            <li>Гримерки, WC, камеры хранения</li>
+            <li>Кейтеринг: фуршет, банкет, кофе-брейк</li>
+            <li>Работает с мая по октябрь</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>ROOF PLACE BAY (клуб)</h3>
+          <ul>
+            <li>450 м² закрытого пространства</li>
+            <li>Два зала: BAY 1 (200 м², сцена, бар, гардероб) и BAY 2 (90 м², панорамные окна, терраса)</li>
+            <li>Вместимость до 300 гостей</li>
+            <li>Звук Funktion One, Pioneer DJ, свет Involight</li>
+            <li>Гримерки, WC, chill-зоны</li>
+            <li>Прямой выход на террасу и на крышу</li>
+            <li>Работает круглый год</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="block">
-    <h2>Площадка ROOF PLACE BAY</h2>
-    <ul>
-      <li>Клубное пространство на 450 м²</li>
-      <li>Зал BAY 1: 200 м², сцена, бар, гардероб</li>
-      <li>Зал BAY 2: 90 м², панорамные окна, выход на террасу</li>
-      <li>Вместимость: до 300 гостей</li>
-      <li>Звук Funktion One, Pioneer DJ, Involight свет</li>
-    </ul>
+  <hr class="divider">
+
+  <!-- Что включено -->
+  <section class="bg-gray section">
+    <div class="container">
+      <h2>Что включено в аренду</h2>
+      <div class="two-col">
+        <div>
+          <ul>
+            <li>Технический продакшн: звук, свет, DJ-оборудование</li>
+            <li>Продакшн-менеджер и администратор площадки</li>
+            <li>Техник-оператор, клининг, гардеробщик</li>
+            <li>Гримерки и WC для артистов и гостей</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Пандусы и лифт — полная доступность</li>
+            <li>Отдельный вход и въезд для подрядчиков</li>
+            <li>Интернет-линия и Wi-Fi для прямых трансляций</li>
+            <li>База мебели и минимальный декор (по запросу)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="block">
-    <h2>Что включено</h2>
-    <ul>
-      <li>Технический продакшн: звук, свет, DJ-оборудование</li>
-      <li>Команда: продакшн-менеджер, координатор, техник, клининг</li>
-      <li>Гримерки, WC, доступ без барьеров</li>
-    </ul>
+  <hr class="divider">
+
+  <!-- Стоимость -->
+  <section id="cost" class="bg-white section">
+    <div class="container">
+      <h2>Стоимость аренды</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Площадка</th>
+            <th>Гости</th>
+            <th>Будни</th>
+            <th>Выходные</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ROOF PLACE BAY</td>
+            <td>до 50</td>
+            <td>100 000 ₽</td>
+            <td>150 000 ₽</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>50–100</td>
+            <td>150 000 ₽</td>
+            <td>150 000 ₽</td>
+          </tr>
+          <tr>
+            <td>ROOF PLACE AIR</td>
+            <td>300–1500</td>
+            <td>300 000 ₽</td>
+            <td>до 400 000 ₽</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><em>Цена зависит от формата и даты. Уточните у менеджера.</em></p>
+    </div>
   </section>
 
-  <section class="block">
-    <h2>Стоимость аренды</h2>
-    <table>
-      <thead>
-        <tr><th>Площадка</th><th>Гости</th><th>Будни</th><th>Выходные</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>ROOF PLACE BAY</td><td>до 50</td><td>100 000 ₽</td><td>150 000 ₽</td></tr>
-        <tr><td></td><td>50–100</td><td>150 000 ₽</td><td>150 000 ₽</td></tr>
-        <tr><td>ROOF PLACE AIR</td><td>300–1500</td><td>300 000 ₽</td><td>до 400 000 ₽</td></tr>
-      </tbody>
-    </table>
+  <hr class="divider">
+
+  <!-- Контакты -->
+  <section id="contacts" class="bg-gray section">
+    <div class="container">
+      <h2>Контакты</h2>
+      <p>По вопросам аренды: <br>
+         Телефон: <strong>+7 (961) 811-60-02</strong><br>
+         Email: <strong>andreevv2016@gmail.com</strong>
+      </p>
+      <a href="mailto:andreevv2016@gmail.com" class="btn">Оставить заявку</a>
+    </div>
   </section>
 
-  <section class="block">
-    <h2>Контакты</h2>
-    <p>Телефон: +7 (961) 811-60-02<br>Email: andreevv2016@gmail.com</p>
-    <a href="#" class="button">Оставить заявку</a>
-  </section>
+  <footer>
+    <div class="footer-container">
+      <div>
+        <p>© 2025 ROOF PROJECT</p>
+        <p>ИНН 7813244775 • ОГРН 1167847113345</p>
+      </div>
+      <div>
+        <a href="#">Политика конфиденциальности</a><br>
+        <a href="#">Правила площадки</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
