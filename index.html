@@ -12,12 +12,7 @@
       color: #111;
       line-height: 1.8;
     }
-    header.hero {
-      background: url('cover.jpg') no-repeat center center/cover;
-      color: black;
-      text-align: center;
-      padding: 180px 20px 100px;
-    }
+    /* Навигация */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -39,19 +34,17 @@
       color: #111;
       font-size: 14px;
     }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
+    /* Герой */
+    header.hero {
+      background: url('cover.jpg') no-repeat center center/cover;
+      color: black;
+      text-align: center;
+      padding: 180px 20px 100px;
     }
     h1 {
       font-size: 48px;
       margin-bottom: 10px;
       color: black;
-    }
-    h2 {
-      font-size: 32px;
-      margin-top: 0;
     }
     .subheading {
       font-size: 18px;
@@ -65,7 +58,20 @@
       text-decoration: none;
       border-radius: 4px;
       margin: 5px;
+      font-size: 14px;
     }
+    /* Секции */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 32px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    /* Сетка */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -77,25 +83,35 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    .highlight {
-      color: orange;
-      font-weight: bold;
-    }
-    footer {
-      background: #111;
-      color: #eee;
-      padding: 40px 20px;
-      text-align: center;
-    }
     ul {
       padding-left: 20px;
     }
     p, li {
       line-height: 1.8;
     }
+    /* Галерея */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    /* Футер */
+    footer {
+      background: #111;
+      color: #eee;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
+  <!-- Навигация -->
   <div class="navbar">
     <div class="logo">ROOF PLACE</div>
     <nav>
@@ -106,6 +122,7 @@
     </nav>
   </div>
 
+  <!-- Первый экран -->
   <header class="hero">
     <h1>ВАШЕ МЕРОПРИЯТИЕ на крыше</h1>
     <p class="subheading">Собрали лучшее, что есть в Петербурге<br>музыка · крыши · вид на Финский залив</p>
@@ -113,11 +130,13 @@
     <a href="#" class="btn">Скачать презентацию</a>
   </header>
 
+  <!-- О площадке -->
   <section>
     <h2>О площадке</h2>
-    <p>ROOF PLACE — это две площадки в креативном кластере Брусницын с прямым видом на Финский залив: открытая крыша (AIR) и закрытое клубное пространство (BAY). Каждая оснащена светом, звуком, сценой, барами и инфраструктурой для событий любого масштаба: от камерных ужинов до фестивалей.</p>
+    <p>ROOF PLACE — это две площадки в креативном кластере Брусницын с прямым видом на Финский залив: открытая крыша (AIR) и закрытое клубное пространство (BAY). Каждая оснащена сценой, звуком, светом, барами и инфраструктурой для событий любого масштаба: от камерных ужинов до фестивалей.</p>
   </section>
 
+  <!-- Что проводят -->
   <section>
     <h2>Что здесь проводят</h2>
     <div class="grid">
@@ -130,36 +149,47 @@
     </div>
   </section>
 
+  <!-- Площадки -->
   <section>
     <h2>Площадки</h2>
     <div class="grid">
       <div class="card">
         <h3>ROOF PLACE AIR</h3>
         <ul>
-          <li>2000 м² открытой крыши</li>
+          <li>2000&nbsp;м² открытой крыши</li>
           <li>до 1500 гостей</li>
-          <li>сцена 12×6 м</li>
-          <li>звук D&B</li>
-          <li>LED-экран</li>
+          <li>сцена 12×6&nbsp;м</li>
+          <li>звук D&B, LED-экран</li>
           <li>фудкорт, бары, VIP-зоны</li>
-          <li>гримёрки, локеры</li>
+          <li>гримёрки, локеры, WC</li>
           <li>работает с мая по октябрь</li>
         </ul>
       </div>
       <div class="card">
         <h3>ROOF PLACE BAY</h3>
         <ul>
-          <li>450 м²</li>
-          <li>два зала BAY 1 и BAY 2</li>
-          <li>сцена, Funktion-One, Pioneer DJ</li>
+          <li>450&nbsp;м², два зала BAY&nbsp;1 и BAY&nbsp;2</li>
+          <li>сцена, звук Funktion-One, Pioneer&nbsp;DJ</li>
           <li>панорамные окна, бар, выход на крышу</li>
-          <li>терраса, гардероб</li>
+          <li>терраса, гардероб, WC</li>
           <li>работает круглый год</li>
         </ul>
       </div>
     </div>
   </section>
 
+  <!-- Галерея -->
+  <section>
+    <h2>Фото площадки</h2>
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Вид с крыши">
+      <img src="photo2.jpg" alt="Сцена ROOF PLACE AIR">
+      <img src="photo3.jpg" alt="Зал BAY 1">
+      <img src="photo4.jpg" alt="Зал BAY 2">
+    </div>
+  </section>
+
+  <!-- Отзывы -->
   <section>
     <h2>Отзывы</h2>
     <div class="grid">
@@ -177,7 +207,21 @@
       </div>
       <div class="card">
         <h4>Екатерина — свадьба 11.10.2022</h4>
-        <p>Команда помогла с меню и расстановкой мебели, лояльно и дружелюбно отнеслась к пожеланиям. Место — атмосферное, еда — отличная.</p>
+        <p>Команда помогла с меню и расстановкой мебели, лояльно и дружелюбно отнеслась ко всем просьбам. Место — атмосферное, еда — отличная.</p>
       </div>
     </div>
   </section>
+
+  <!-- Форма -->
+  <section id="form">
+    <h2>Связаться</h2>
+    <p>Оставьте заявку — мы расскажем про формат, свободные даты и покажем площадку вживую.</p>
+    <a href="#" class="btn">Оставить заявку</a>
+    <a href="#" class="btn">Скачать презентацию</a>
+  </section>
+
+  <footer>
+    ROOF PLACE, Санкт-Петербург · Квартал Брусницын<br>© 2025
+  </footer>
+</body>
+</html>
